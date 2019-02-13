@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var imgArr = ['https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0F/06/ChMkJlfI162IeK07AAY_egKaTWoAAU6qQHhDUcABj-S342.jpg','https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0F/06/ChMkJlfI15yIFHF8AANwCMns-CoAAU6qQFNDZMAA3Ag386.jpg','https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0F/06/ChMkJlfI17KIHB_fAAMRJQRdoxQAAU6qQIhsoEAAxE9307.jpg','https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0F/06/ChMkJ1fI18uIPl4SAAH7nIUWw9wAAU6qQKoXZ4AAfu0026.jpg','https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0F/09/ChMkJlauzf2IE5XJAA-red7TDuAAAH9JgJwJ_cAD6uR214.jpg','https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0F/09/ChMkJ1auzf2IV03JAAyShG4ONAYAAH9JgKevbwADJKc106.jpg','https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0F/09/ChMkJlauzf6IWcF3ABVVOcX6ShYAAH9JgKtYmsAFVVR095.jpg','https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0E/0C/ChMkJlfGz9uIF7gyAAcRRI7xTRsAAU4MQD9LHYABxFc133.jpg','https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0E/0C/ChMkJlfGz-KIEDSbAAN_hKhO3v8AAU4MQMrHfoAA3-c103.jpg','https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0E/0C/ChMkJ1fGz-SIT76kAAPajjk5ShwAAU4MQNrTOgAA9qm368.jpg','https://desk-fd.zol-img.com.cn/t_s144x90c5/g5/M00/0E/0C/ChMkJlfGz-WIMxcAAARPmvkOA38AAU4MQPgGP4ABE-y399.jpg'];
+        var loadImg = (src) => {
+            return new Promise((resolve,reject) => {
+                let img = new Image();
+                img.onload = () => {
+                    resolve(img)
+                }
+                img.onerror = ()=> {
+                    reject()
+                }
+                img.src = src;
+            })
+        }
+        imgArr.forEach((itm,ind)=>{
+            async function func() {
+                let img = await loadImg(itm);
+                document.body.appendChild(img)
+            }
+            func().then(res=>console.log(res))
+        })
+    </script>
+</body>
+</html>
