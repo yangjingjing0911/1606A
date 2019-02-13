@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #eee;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #57A7DC;
+  background: #fff;
+}
+
+.header li {
+  flex: 1;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+}
+
+.header li.active {
+  background: #3AAFFE;
+  color: #fff;
+}
+
+.content {
+  width: 100%;
+  flex: 1;
+  overflow: auto;
+}
+
+.pic {
+  width: 100%;
+}
+
+.pic img {
+  width: 100%;
+  height: auto;
+}
+
+.addBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  background: #fff;
+}
+
+.addBox dl {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.addBox dl dt {
+  width: 70%;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  padding: 3px 0;
+}
+
+.addBox dl dt img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.addBox dl dd {
+  width: 70%;
+}
+
+.list {
+  width: 100%;
+  margin-top: 15px;
+  padding-left: 10px;
+  background: #fff;
+}
+
+.list .service {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #ccc;
+}
+
+.list .service p {
+  padding-right: 10px;
+}
+
+.list .service p:last-of-type {
+  display: flex;
+  align-items: center;
+}
+
+.list .service p:last-of-type span {
+  padding-right: 6px;
+}
+
+.list .service p:last-of-type img {
+  width: 16px;
+  height: 16px;
+}
+
+.list .current {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #ccc;
+}
+
+.list .current p {
+  padding-right: 10px;
+}
+
+.list .current p b {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #C0C0C0;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.list .current p:last-of-type {
+  color: #A9A9A9;
+}
+
+.list .replacement {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #ccc;
+}
+
+.list .replacement p {
+  padding-right: 10px;
+}
+
+.list .replacement p b {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #C0C0C0;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.list .replacement p:last-of-type {
+  color: #A9A9A9;
+}
+
+.list .cost {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #ccc;
+}
+
+.list .cost p {
+  padding-right: 10px;
+}
+
+.discount {
+  width: 100%;
+  height: 60px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.discount p {
+  padding-right: 10px;
+}
+
+.discount p:last-of-type {
+  display: flex;
+  align-items: center;
+}
+
+.discount p:last-of-type span {
+  padding-right: 6px;
+}
+
+.discount p:last-of-type img {
+  width: 16px;
+  height: 16px;
+}
+
+.logo {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  position: relative;
+}
+
+.logo u {
+  margin-top: 10px;
+  display: inline-block;
+  color: #50A9E3;
+}
+
+.logo p {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.logo p img {
+  width: 100px;
+  height: 100px;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: solid 1px #ccc;
+  background: #fff;
+}
+
+.footer button {
+  height: 60px;
+  padding: 0 20px;
+  border: 0;
+  background: #999;
+  color: #fff;
+}
+
+.footer p {
+  padding-left: 10px;
+}
+
+.footer p span {
+  color: #E0514B;
+}
